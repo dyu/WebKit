@@ -395,8 +395,10 @@ int main() {
                 std::experimental::filesystem::status(p1);
             }
         ")
-        set(CMAKE_REQUIRED_LIBRARIES stdc++fs)
         check_cxx_source_compiles("${EXPERIMENTAL_FILESYSTEM_TEST_SOURCE}" STD_EXPERIMENTAL_FILESYSTEM_IS_AVAILABLE)
+        if (STD_EXPERIMENTAL_FILESYSTEM_IS_AVAILABLE)
+            set(CMAKE_REQUIRED_LIBRARIES stdc++fs)
+        endif ()
         unset(CMAKE_REQUIRED_LIBRARIES)
     endif ()
     unset(CMAKE_REQUIRED_FLAGS)
