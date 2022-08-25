@@ -694,7 +694,7 @@ set_source_files_properties(
     libpas/src/libpas/pas_heap_config_kind.c
     libpas/src/libpas/pas_segregated_page_config_kind.c
     libpas/src/libpas/pas_fast_megapage_cache.c
-    PROPERTIES LANGUAGE CXX)
+    PROPERTIES LANGUAGE C)
 
 WEBKIT_ADD_TARGET_CXX_FLAGS(bmalloc
     -Wno-missing-field-initializers
